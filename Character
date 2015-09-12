@@ -85,6 +85,7 @@ public class Character {
         System.out.println((gender.equalsIgnoreCase("Male")) ? "\n\nHis Stats:" : "\n\nHer Stats:");
         System.out.format("\nStrength: %d\nConstitution: %d\nDexterity: %d\nIntelligence: %d\nWisdom: %d\nCharisma: %d\nHitpoints: %d\nArmour: %d\n",
             strength, constitution, dexterity, intelligence, wisdom, charisma, hitpoints, armour);
+            /** below Make sure to include your own personal file location layout after FileOutputStream **/
         try (Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("\\Computer Science_Java\\DnD Character Generator\\Saves\\" + charName + "_Save.txt"), "utf-8"))) {
             writer.write(charName + ", the " + age + " year old " + charRace + " " + charClass);
             writer.write((gender.equalsIgnoreCase("Male")) ? "\r\n\r\nHis Stats:" : "\r\n\r\nHer Stats:");
